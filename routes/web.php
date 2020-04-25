@@ -20,5 +20,9 @@ Route::get('/login','authenticate@login');
 Route::get('/register','authenticate@register');
 Route::get('/loginsubmit','authenticate@loginsubmit');
 Route::get('/registersubmit','authenticate@registersubmit');
+Route::get('home',function()
+{
+    echo "home page";
+})->middleware('usermiddleware');
 
 Route::get('/viewdata','authenticate@viewdata');
